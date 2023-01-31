@@ -4,21 +4,9 @@
 	}
 </script>
 
-<form on:submit|preventDefault={validate}>
-	<input>
-	<button type="submit">
-		Please save me
-	</button>
+<form class="credentialvalidationform block--credentialValidation" on:submit|preventDefault={validate}>
   <input>
-	<button type="submit">
-		test 2
-	</button>
-  <input>
-	<button type="submit">
-		test 3 
-	</button>
-  <input>
-	<button type="submit">
+	<button class="button btn--lightblue button--sm button input--submit" type="submit">
 		test 4
 	</button>
 </form>

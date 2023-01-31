@@ -6,9 +6,9 @@
     "button.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport Button from \"./button.svelte\";\n\timport Form from \"./form.svelte\";\n\n\tfunction handleOnSubmit() {\n\t  console.log(\"I'm the handleOnSubmit() in App.svelte\");\n\t}\n</script>\n\n<style>\n  main {\n    font-family: sans-serif;\n    text-align: center;\n  }\n</style>\n\n<main>\n\t<h1>Hello CodeSandbox</h1>\n\t<h2>Start editing to see some magic happen!</h2>\n\t<Button />\n</main>\n\n<Form on:submit={handleOnSubmit}>\n</Form>",
+    "<script>\n\timport Button from \"./button.svelte\";\n\timport Form from \"./form.svelte\";\n\n\tfunction handleOnSubmit() {\n\t  console.log(\"I'm the handleOnSubmit() in App.svelte\");\n\t}\n    let characterName;\n\n\tfetch('https://swapi.dev/api/people/1')\n\t\t.then((response) => response.json())\n\t\t.then((character) => {\n\t\t\tcharacterName = character.name;\n\t\t})\n</script>\n\n<style>\n  main {\n    font-family: sans-serif;\n    text-align: center;\n  }\n</style>\n\n<main>\n\t<h1>Hello CodeSandbox</h1>\n\t<h2>Start editing to see some magic happen!</h2>\n\t<Button />\n    {characterName}\n</main>\n\n<Form on:submit={handleOnSubmit}>\n</Form>",
     "<script>\n\tlet count = 0;\n\n\tfunction handleClick() {\n\t  count += 1;\n\t}\n</script>\n\n<style>\n\tbutton {\n\t  background: #ff3e00;\n\t  color: white;\n\t  border: none;\n\t  padding: 8px 12px;\n\t  border-radius: 2px;\n\t}\n</style>\n\n<button on:click={handleClick}>\n  Clicked {count} {count === 1 ? 'time' : 'times'}\n</button>"
   ],
   "names": [],
-  "mappings": "AAUE,IAAI,eAAC,CAAC,AACJ,WAAW,CAAE,UAAU,CACvB,UAAU,CAAE,MAAM,AACpB,CAAC;ACJF,MAAM,eAAC,CAAC,AACN,UAAU,CAAE,OAAO,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,GAAG,CAAC,IAAI,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC"
+  "mappings": "AAiBE,IAAI,eAAC,CAAC,AACJ,WAAW,CAAE,UAAU,CACvB,UAAU,CAAE,MAAM,AACpB,CAAC;ACXF,MAAM,eAAC,CAAC,AACN,UAAU,CAAE,OAAO,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,GAAG,CAAC,IAAI,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC"
 }

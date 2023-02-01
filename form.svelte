@@ -3,8 +3,8 @@
 	  console.log("I'm the validate() function");
 	}
 </script>
-
-<form class="credentialvalidationform block--credentialValidation" on:submit|preventDefault={validate}>
+<!-- |preventDefault={validate} -->
+<form class="credentialvalidationform block--credentialValidation" on:submit>
   <input>
 	<button class="button btn--lightblue button--sm button input--submit" type="submit">
 		test 4

@@ -57,7 +57,7 @@
     <h2>Credential Validation</h2>
     <div>
       <input type="text" id="utccredential" bind:value={idkey} />
-      <button type="submit"> Validate </button>
+      <button class="button btn--lightblue button--sm button" type="submit"> Validate </button>
     </div>
     <div />
     {#if idkey === "blank"}
@@ -94,6 +94,28 @@
 
 <!-- {submit} -->
 <style>
+.button {
+    /* display: inline-block; */
+    background-color: transparent;
+    padding: 10px 1.5rem;
+    border: 1px solid;
+    border-color: #cfd8dc;
+    border-radius: 0.25rem;
+    color: #263238;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.btn--lightblue, .btn-light {
+    --tw-bg-opacity: 1;
+    background-color: rgba(226,232,240,var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(17,46,81,var(--tw-text-opacity));
+    border: 0;
+}
 .credential_validation_result_message {
   border-collapse: collapse;
   width: 100%;

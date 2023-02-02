@@ -1,14 +1,8 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [
-    "App.svelte",
-    "button.svelte"
-  ],
-  "sourcesContent": [
-    "<script>\n\timport Button from \"./button.svelte\";\n\timport Form from \"./form.svelte\";\n\n\tlet p = 'MyName'\n\t// $: nameUpper = p.toUpperCase()\n\t// var characterName = p;\n\tfunction handleOnSubmit() {\n\t//   console.log(\"I'm the handleOnSubmit() in App.svelte\");\n\t//   fetch('https://swapi.dev/api/people/1')\n\t// \t.then((response) => response.json())\n\t// \t.then((character) => {\n\t// \t\tcharacterName = character.name;\n\t// \t})\n\t}\n\n\n</script>\n\n<style>\n  main {\n    font-family: sans-serif;\n    text-align: center;\n  }\n</style>\n\n<main>\n\t<h1>Hello CodeSandbox</h1>\n\t<h2>Start editing to see some magic happen!</h2>\n\t<Button />\n    <!-- {characterNametwo} -->\n</main>\n\n<Form on:submit={handleOnSubmit}>\n</Form>\n\n\n<main>\n\t<h1>Hello CodeSandbox</h1>\n\t<h2>Start editing to see some magic happen!</h2>\n    <!-- {characterName} -->\n</main>",
-    "<script>\n\tlet count = 0;\n\texport let characterNametwo = null;\n\tfunction handleClick() {\n\t  count += 1;\n\t  fetch('https://secure.cecredentialtrust.com:8086/api/webapi/v3/CeCredentialValidate/95848d1d-07d0-4667-91f5-96887d32c64c/222G-MI8O-ANSZ')\n\t\t.then((response) => response.json())\n\t\t.then((character) => {\n\t\t\tconsole.log(character);\n\t\t    characterNametwo = character[0].Name;\n\t\t})\n\t}\n</script>\n\n<style>\n\tbutton {\n\t  background: #ff3e00;\n\t  color: white;\n\t  border: none;\n\t  padding: 8px 12px;\n\t  border-radius: 2px;\n\t}\n</style>\n\n<button on:click={handleClick}>\n  Clicked {count} {count === 1 ? 'time' : 'times'}\n</button>\n\n\n<h2>{characterNametwo}</h2>"
-  ],
+  "sources": [],
+  "sourcesContent": [],
   "names": [],
-  "mappings": "AAoBE,IAAI,eAAC,CAAC,AACJ,WAAW,CAAE,UAAU,CACvB,UAAU,CAAE,MAAM,AACpB,CAAC;ACRF,MAAM,eAAC,CAAC,AACN,UAAU,CAAE,OAAO,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,GAAG,CAAC,IAAI,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC"
+  "mappings": ""
 }

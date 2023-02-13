@@ -35,11 +35,10 @@
   class="credentialvalidationform col-end-2"
   on:submit|preventDefault={handleSubmit(idkey)}
 >
-<div class="credentialvalidation_form_title">
-  <h2>Credential Validation</h2>
-</div>
-<div class="credentialvalidation_form grid grid-cols-2">
-    
+  <div class="credentialvalidation_form_title">
+    <h2>Credential Validation</h2>
+  </div>
+  <div class="credentialvalidation_form grid grid-cols-2">
     <div class="grid gap-4 max-w-xs">
       <input type="text" id="utccredential" bind:value={idkey} />
       <button class="button btn--lightblue button--sm button" type="submit">
@@ -48,7 +47,11 @@
     </div>
     {#if array.length > 0 && array[0].CeDiplomaID === ""}
       <!-- <p> Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p> -->
-      <p>We cannot validate the Credential at this time. Please contact apostille@utc.edu for assistance. When you do, please provide the student name and CeDiD</p>
+      <p>
+        We cannot validate the Credential at this time. Please contact
+        apostille@utc.edu for assistance. When you do, please provide the
+        student name and CeDiD
+      </p>
     {/if}
     {#if idkey === " " || idkey === ""}
       <p>Make sure to enter a valid ID for example 222G-MI3O-ZZZZ</p>
@@ -88,23 +91,22 @@
 <!-- {submit} -->
 <style>
   @media only screen and (min-width: 900px) {
-   .grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
-  }
-
 
   @media only screen and (min-width: 200px) {
-  .grid{
-    display: grid;
+    .grid {
+      display: grid;
+    }
+    .gap-4 {
+      grid-gap: 1rem;
+    }
+    .max-w-xs {
+      max-width: 20rem;
+    }
   }
-  .gap-4{ 
-    grid-gap: 1rem;
-  }
-  .max-w-xs{
-    max-width: 20rem
-  }
- }
   .button {
     /* display: inline-block; */
     background-color: transparent;
@@ -157,7 +159,7 @@
   .credentialvalidation_form_title {
     margin-left: 2rem;
   }
-  .credentialvalidation_form{
+  .credentialvalidation_form {
     margin-left: 2rem;
   }
   .credentialvalidation_form_footer {
@@ -171,8 +173,5 @@
     .credential_validation_result_message {
       margin-left: 3rem;
     }
-  }
-  .credential_validation_result_message {
-    padding: 2rem 2rem 2rem 2rem;
   }
 </style>

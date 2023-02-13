@@ -38,8 +38,9 @@
   <div class="credentialvalidation_form_title">
     <h2>Credential Validation</h2>
   </div>
-  <div class="credentialvalidation_form grid grid-cols-2">
+  <div class="credentialvalidation_form grid grid-cols-2 credential_validation_result_message">
     <div class="grid gap-4 max-w-xs">
+      <label for="ceDiD">CeDiD</label><br>
       <input type="text" id="utccredential" bind:value={idkey} />
       <button class="button btn--lightblue button--sm button" type="submit">
         Validate
@@ -167,11 +168,19 @@
     margin-right: 2rem;
     padding-bottom: 1rem;
   }
-
+  .credential_validation_result_message p {
+    background: #e2e8f0;
+    /* padding: 1rem; */
+    max-width: 20rem;
+}
   /*min width comes from tailwindcss 'md': '768px' size */
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .credential_validation_result_message {
       margin-left: 3rem;
     }
+    .credential_validation_result_message p {
+      max-width: 30rem;
+}
+    
   }
 </style>

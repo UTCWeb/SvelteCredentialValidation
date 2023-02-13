@@ -40,7 +40,7 @@
   </div>
   <div class="credentialvalidation_form grid grid-cols-2 credential_validation_result_message">
     <div class="grid gap-4 max-w-xs">
-      <label for="ceDiD">CeDiD</label><br>
+      <label for="ceDiD">CeDiD*</label>
       <input type="text" id="utccredential" bind:value={idkey} />
       <button class="button btn--lightblue button--sm button" type="submit">
         Validate

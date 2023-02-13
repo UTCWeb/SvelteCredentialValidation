@@ -1,19 +1,22 @@
 <script>
-  let submit = false;
-  let characterNametwo = "default";
   // Blank field that checks input.
   let idkey = " ";
   let array = [];
   let today = new Date();
-  let date =
-    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-  let time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  let dateTime = date + " " + time;
+  let dateTime =
+    today.getFullYear() +
+    "-" +
+    (today.getMonth() + 1) +
+    "-" +
+    today.getDate() +
+    " " +
+    today.getHours() +
+    ":" +
+    today.getMinutes() +
+    ":" +
+    today.getSeconds();
 
-  // document.getElementById("utccredential")[0]
   function handleSubmit(idkey) {
-    submit = true;
     if (idkey == " " || idkey == "") {
       return;
     }
@@ -23,52 +26,29 @@
         idkey
     )
       .then((response) => response.json())
-      .then((data) => (array = data))
-      .then((character) => {
-        console.log(character);
-        characterNametwo = character[0].Name;
-        // array = response;
-      });
-    characterNametwo = characterNametwo;
+      .then((data) => (array = data));
     array = array;
-    // console.log(array);
   }
-
-  // const handleKeyup = () => {
-  //   submit = false;
-
-  //   if (event.code == "Enter") {
-  //     event.preventDefault();
-  //     event.target.value;
-  //     value = event.target.value;
-  //     return false;
-  //   }
-  //   event.target.value;
-  // fetch('https://secure.cecredentialtrust.com:8086/api/webapi/v3/CeCredentialValidate/95848d1d-07d0-4667-91f5-96887d32c64c/222G-MI8O-ANSZ')
-  // fetch('https://secure.cecredentialtrust.com:8086/api/webapi/v3/CeCredentialValidate/95848d1d-07d0-4667-91f5-96887d32c64c/'+ event.target.value)
-  // .then((response) => response.json())
-  // .then((character) => {
-  // 	console.log(character);
-  //     characterNametwo = character[0].Name;
-  // })
-  // };
 </script>
 
 <form
   class="credentialvalidationform col-end-2"
   on:submit|preventDefault={handleSubmit(idkey)}
 >
-  <div class="credentialvalidation_form_title">
-    <h2>Credential Validation</h2>
-    <div>
+<div class="credentialvalidation_form_title">
+  <h2>Credential Validation</h2>
+</div>
+<div class="credentialvalidation_form grid grid-cols-2">
+    
+    <div class="grid gap-4 max-w-xs">
       <input type="text" id="utccredential" bind:value={idkey} />
       <button class="button btn--lightblue button--sm button" type="submit">
         Validate
       </button>
     </div>
-    <div />
     {#if array.length > 0 && array[0].CeDiplomaID === ""}
-      <p>Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p>
+      <!-- <p> Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p> -->
+      <p>We cannot validate the Credential at this time. Please contact apostille@utc.edu for assistance. When you do, please provide the student name and CeDiD</p>
     {/if}
     {#if idkey === " " || idkey === ""}
       <p>Make sure to enter a valid ID for example 222G-MI3O-ZZZZ</p>
@@ -95,8 +75,6 @@
           >
         </div>
       {/each}
-      <!-- {:else}
-        <h1>The ID does not match any given record</h1> -->
     {/if}
   </div>
 
@@ -109,6 +87,24 @@
 
 <!-- {submit} -->
 <style>
+  @media only screen and (min-width: 900px) {
+   .grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  }
+
+
+  @media only screen and (min-width: 200px) {
+  .grid{
+    display: grid;
+  }
+  .gap-4{ 
+    grid-gap: 1rem;
+  }
+  .max-w-xs{
+    max-width: 20rem
+  }
+ }
   .button {
     /* display: inline-block; */
     background-color: transparent;
@@ -124,8 +120,7 @@
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  .btn--lightblue,
-  .btn-light {
+  .btn--lightblue {
     --tw-bg-opacity: 1;
     background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
     --tw-text-opacity: 1;
@@ -159,18 +154,11 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
-
-  .credentialvalidationform .input--submit {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
   .credentialvalidation_form_title {
     margin-left: 2rem;
   }
-  .credential_validation_form_data {
+  .credentialvalidation_form{
     margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
   }
   .credentialvalidation_form_footer {
     margin-left: 2rem;
@@ -180,18 +168,11 @@
 
   /*min width comes from tailwindcss 'md': '768px' size */
   @media (min-width: 768px) {
-    .credential_validation_form_items {
-      display: flex;
-    }
     .credential_validation_result_message {
       margin-left: 3rem;
     }
   }
   .credential_validation_result_message {
     padding: 2rem 2rem 2rem 2rem;
-  }
-  .credential_validation_result_message p {
-    background: #e2e8f0;
-    padding: 1rem;
   }
 </style>

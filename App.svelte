@@ -36,13 +36,18 @@
   on:submit|preventDefault={handleSubmit(idkey)}
 >
   <div class="credentialvalidation_form_title">
-    <h2>Credential Validation</h2>
+    <h2 class="credentialvalidationtitle">Credential Validation</h2>
   </div>
-  <div class="credentialvalidation_form grid grid-cols-2 credential_validation_result_message">
-    <div class="grid gap-4 max-w-xs">
-      <label for="ceDiD">CeDiD*</label>
+  <div
+    class="credentialvalidation_form cegrid grid-cols-2 credential_validation_result_message"
+  >
+    <div class="cegrid gap-x-4 max-w-xs">
+      <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
       <input type="text" id="utccredential" bind:value={idkey} />
-      <button class="button btn--lightblue button--sm button" type="submit">
+      <button
+        class="button btn--lightblue button--sm button cevalidatebutton"
+        type="submit"
+      >
         Validate
       </button>
     </div>
@@ -98,15 +103,22 @@
   }
 
   @media only screen and (min-width: 200px) {
-    .grid {
+    .cegrid {
       display: grid;
     }
-    .gap-4 {
-      grid-gap: 1rem;
+    .gap-x-4 {
+      column-gap: 1rem;
     }
     .max-w-xs {
       max-width: 20rem;
     }
+  }
+  .ceDiDlabel {
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+  .cevalidatebutton {
+    margin-top: 2rem;
   }
   .button {
     /* display: inline-block; */
@@ -172,15 +184,14 @@
     background: #e2e8f0;
     /* padding: 1rem; */
     max-width: 20rem;
-}
+  }
   /*min width comes from tailwindcss 'md': '768px' size */
   @media (min-width: 900px) {
     .credential_validation_result_message {
       margin-left: 3rem;
     }
     .credential_validation_result_message p {
-      max-width: 30rem;
-}
-    
+      max-width: 25rem;
+    }
   }
 </style>

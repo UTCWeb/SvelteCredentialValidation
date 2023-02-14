@@ -51,7 +51,7 @@
         Validate
       </button>
     </div>
-    <div class="credential_validation_result_message cepr-32">
+    <div class="credential_validation_result_message cepl-32">
     {#if array.length > 0 && array[0].CeDiplomaID === ""}
       <!-- <p> Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p> -->
       <p>
@@ -186,8 +186,8 @@
     .credentialvalidation_form {
     margin-left: 2rem;
     }
-    .cepr-32{
-      padding-right: 8rem;
+    .cepl-32{
+      padding-left: 8rem;
     }
     .cegrid-cols-2 {
       /* grid-template-columns: repeat(2, minmax(0, 1fr)); */

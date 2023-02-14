@@ -102,9 +102,6 @@
     .cegrid {
       display: grid;
     }
-    .ceflex {
-      display: flex;
-    }
     .gap-x-4 {
       column-gap: 1rem;
     }
@@ -185,6 +182,9 @@
   @media (min-width: 768px) {
     .credentialvalidation_form {
     margin-left: 2rem;
+    }
+    .ceflex {
+      display: flex;
     }
     .cepl-32{
       padding-left: 8rem;

@@ -425,7 +425,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "We cannot validate the Credential at this time. Please contact\n        apostille@utc.edu for assistance. When you do, please provide the\n        student name and CeDiD";
-    			attr_dev(p, "class", "svelte-ddh4o8");
+    			attr_dev(p, "class", "svelte-ild1gc");
     			add_location(p, file, 56, 6, 1563);
     		},
     		m: function mount(target, anchor) {
@@ -523,7 +523,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Make sure to enter a valid ID for example 222G-MI3O-ZZZZ";
-    			attr_dev(p, "class", "svelte-ddh4o8");
+    			attr_dev(p, "class", "svelte-ild1gc");
     			add_location(p, file, 63, 6, 1810);
     		},
     		m: function mount(target, anchor) {
@@ -618,39 +618,39 @@ var app = (function () {
     			t10 = text(t10_value);
     			add_location(b0, file, 75, 19, 2283);
     			add_location(b1, file, 75, 50, 2314);
-    			attr_dev(td0, "class", "svelte-ddh4o8");
+    			attr_dev(td0, "class", "svelte-ild1gc");
     			add_location(td0, file, 75, 15, 2279);
-    			attr_dev(td1, "class", "svelte-ddh4o8");
+    			attr_dev(td1, "class", "svelte-ild1gc");
     			add_location(td1, file, 75, 61, 2325);
-    			attr_dev(tr0, "class", "svelte-ddh4o8");
+    			attr_dev(tr0, "class", "svelte-ild1gc");
     			add_location(tr0, file, 74, 12, 2260);
     			add_location(b2, file, 78, 21, 2402);
-    			attr_dev(td2, "class", "svelte-ddh4o8");
+    			attr_dev(td2, "class", "svelte-ild1gc");
     			add_location(td2, file, 78, 17, 2398);
-    			attr_dev(td3, "class", "svelte-ddh4o8");
+    			attr_dev(td3, "class", "svelte-ild1gc");
     			add_location(td3, file, 78, 39, 2420);
-    			attr_dev(tr1, "class", "svelte-ddh4o8");
+    			attr_dev(tr1, "class", "svelte-ild1gc");
     			add_location(tr1, file, 78, 13, 2394);
     			add_location(b3, file, 79, 19, 2476);
-    			attr_dev(td4, "class", "svelte-ddh4o8");
+    			attr_dev(td4, "class", "svelte-ild1gc");
     			add_location(td4, file, 79, 15, 2472);
-    			attr_dev(td5, "class", "svelte-ddh4o8");
+    			attr_dev(td5, "class", "svelte-ild1gc");
     			add_location(td5, file, 79, 36, 2493);
-    			attr_dev(tr2, "class", "svelte-ddh4o8");
+    			attr_dev(tr2, "class", "svelte-ild1gc");
     			add_location(tr2, file, 78, 72, 2453);
     			add_location(b4, file, 81, 19, 2555);
-    			attr_dev(td6, "class", "svelte-ddh4o8");
+    			attr_dev(td6, "class", "svelte-ild1gc");
     			add_location(td6, file, 81, 15, 2551);
-    			attr_dev(td7, "class", "svelte-ddh4o8");
+    			attr_dev(td7, "class", "svelte-ild1gc");
     			add_location(td7, file, 81, 47, 2583);
-    			attr_dev(tr3, "class", "svelte-ddh4o8");
+    			attr_dev(tr3, "class", "svelte-ild1gc");
     			add_location(tr3, file, 80, 13, 2532);
     			add_location(b5, file, 83, 21, 2654);
-    			attr_dev(td8, "class", "svelte-ddh4o8");
+    			attr_dev(td8, "class", "svelte-ild1gc");
     			add_location(td8, file, 83, 17, 2650);
-    			attr_dev(td9, "class", "svelte-ddh4o8");
+    			attr_dev(td9, "class", "svelte-ild1gc");
     			add_location(td9, file, 83, 44, 2677);
-    			attr_dev(tr4, "class", "svelte-ddh4o8");
+    			attr_dev(tr4, "class", "svelte-ild1gc");
     			add_location(tr4, file, 83, 13, 2646);
     			add_location(tbody, file, 72, 10, 2198);
     		},
@@ -765,28 +765,28 @@ var app = (function () {
     			a.textContent = "CeCredentialTrust";
     			attr_dev(h2, "class", "credentialvalidationtitle");
     			add_location(h2, file, 38, 4, 867);
-    			attr_dev(div0, "class", "credentialvalidation_form_title svelte-ddh4o8");
+    			attr_dev(div0, "class", "credentialvalidation_form_title svelte-ild1gc");
     			add_location(div0, file, 37, 2, 817);
     			attr_dev(label, "for", "ceDiD");
-    			attr_dev(label, "class", "ceDiDlabel svelte-ddh4o8");
+    			attr_dev(label, "class", "ceDiDlabel svelte-ild1gc");
     			add_location(label, file, 44, 6, 1082);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "id", "utccredential");
     			add_location(input, file, 45, 6, 1141);
-    			attr_dev(button, "class", "button btn--lightblue button--sm button cevalidatebutton svelte-ddh4o8");
+    			attr_dev(button, "class", "button btn--lightblue button--sm button cevalidatebutton svelte-ild1gc");
     			attr_dev(button, "type", "submit");
     			add_location(button, file, 46, 6, 1207);
-    			attr_dev(div1, "class", "cegrid gap-x-4 max-w-xs svelte-ddh4o8");
+    			attr_dev(div1, "class", "cegrid gap-x-4 max-w-xs svelte-ild1gc");
     			add_location(div1, file, 43, 4, 1038);
-    			attr_dev(div2, "class", "credential_validation_result_message cepl-32 svelte-ddh4o8");
+    			attr_dev(div2, "class", "credential_validation_result_message cepl-32 svelte-ild1gc");
     			add_location(div2, file, 53, 4, 1366);
-    			attr_dev(div3, "class", "credentialvalidation_form ceflex credential_validation_result_message svelte-ddh4o8");
+    			attr_dev(div3, "class", "credentialvalidation_form ceflex credential_validation_result_message svelte-ild1gc");
     			add_location(div3, file, 40, 2, 943);
     			attr_dev(a, "href", "https://secure.cecredentialtrust.com/");
     			add_location(a, file, 92, 15, 2840);
-    			attr_dev(p, "class", "credentialvalidation_form_footer svelte-ddh4o8");
+    			attr_dev(p, "class", "credentialvalidation_form_footer svelte-ild1gc");
     			add_location(p, file, 91, 2, 2780);
-    			attr_dev(form, "class", "credentialvalidationform col-end-2 svelte-ddh4o8");
+    			attr_dev(form, "class", "credentialvalidationform col-end-2 svelte-ild1gc");
     			add_location(form, file, 33, 0, 713);
     		},
     		l: function claim(nodes) {

@@ -166,9 +166,6 @@
   .credentialvalidation_form_title {
     margin-left: 2rem;
   }
-  .credentialvalidation_form {
-    margin-left: 2rem;
-  }
   .credentialvalidation_form_footer {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -181,6 +178,9 @@
   }
   /*min width comes from tailwindcss 'md': '768px' size */
   @media (min-width: 768px) {
+    .credentialvalidation_form {
+    margin-left: 2rem;
+    }
     .cegrid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }

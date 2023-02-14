@@ -41,7 +41,7 @@
   <div
     class="credentialvalidation_form ceflex credential_validation_result_message"
   >
-    <div class="cegrid gap-x-4 max-w-xs">
+    <div class="ceflex max-w-xs">
       <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
       <input type="text" id="utccredential" bind:value={idkey} />
       <button

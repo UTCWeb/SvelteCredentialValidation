@@ -39,7 +39,7 @@
     <h2 class="credentialvalidationtitle">Credential Validation</h2>
   </div>
   <div
-    class="credentialvalidation_form cegrid grid-cols-2 credential_validation_result_message"
+    class="credentialvalidation_form cegrid cegrid-cols-2 credential_validation_result_message"
   >
     <div class="cegrid gap-x-4 max-w-xs">
       <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
@@ -180,8 +180,8 @@
     max-width: 20rem;
   }
   /*min width comes from tailwindcss 'md': '768px' size */
-  @media (min-width: 1536px) {
-    .grid-cols-2 {
+  @media (min-width: 768px) {
+    .cegrid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .credential_validation_result_message {

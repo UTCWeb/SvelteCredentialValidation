@@ -41,7 +41,7 @@
   <div
     class="credentialvalidation_form ceflex credential_validation_result_message"
   >
-    <div class="ceflex max-w-xs">
+    <div class="ceflexform max-w-xs">
       <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
       <input type="text" id="utccredential" bind:value={idkey} />
       <button
@@ -108,6 +108,10 @@
     .max-w-xs {
       max-width: 20rem;
     }
+  }
+  .ceflexform {
+      display: flex;
+      flex-direction: column;
   }
   .ceDiDlabel {
     font-weight: bold;

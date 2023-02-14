@@ -39,7 +39,7 @@
     <h2 class="credentialvalidationtitle">Credential Validation</h2>
   </div>
   <div
-    class="credentialvalidation_form cegrid cegrid-cols-2 credential_validation_result_message"
+    class="credentialvalidation_form ceflex credential_validation_result_message"
   >
     <div class="cegrid gap-x-4 max-w-xs">
       <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
@@ -51,6 +51,7 @@
         Validate
       </button>
     </div>
+    <div class="credential_validation_result_message cepr-32">
     {#if array.length > 0 && array[0].CeDiplomaID === ""}
       <!-- <p> Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p> -->
       <p>
@@ -68,7 +69,7 @@
         <!-- {index.Name}
         {index.Degree1}
         {index.SchoolName} -->
-        <div class="credential_validation_result_message">
+
           <tbody>
             <!-- 02/Feb/2023 15:39:11 -->
             <tr
@@ -82,9 +83,10 @@
               ></tr
             ><tr><td><b>Credential:</b></td><td>{index.Degree1}</td></tr></tbody
           >
-        </div>
+        
       {/each}
     {/if}
+  </div>
   </div>
 
   <p class="credentialvalidation_form_footer">
@@ -99,6 +101,9 @@
   @media (min-width: 200px) {
     .cegrid {
       display: grid;
+    }
+    .ceflex {
+      display: flex;
     }
     .gap-x-4 {
       column-gap: 1rem;
@@ -181,11 +186,12 @@
     .credentialvalidation_form {
     margin-left: 2rem;
     }
-    .cegrid-cols-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .cepr-32{
+      padding-right: 8rem;
     }
-    .credential_validation_result_message {
-      margin-left: 3rem;
+    .cegrid-cols-2 {
+      /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+
     }
     .credential_validation_result_message p {
       max-width: 25rem;

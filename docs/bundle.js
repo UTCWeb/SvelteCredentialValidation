@@ -417,7 +417,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:4) {#if array.length > 0 && array[0].CeDiplomaID === ""}
+    // (55:4) {#if array.length > 0 && array[0].CeDiplomaID === ""}
     function create_if_block_2(ctx) {
     	let p;
 
@@ -425,8 +425,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "We cannot validate the Credential at this time. Please contact\n        apostille@utc.edu for assistance. When you do, please provide the\n        student name and CeDiD";
-    			attr_dev(p, "class", "svelte-1kumjsq");
-    			add_location(p, file, 55, 6, 1514);
+    			attr_dev(p, "class", "svelte-3vj0ex");
+    			add_location(p, file, 56, 6, 1563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -440,14 +440,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(54:4) {#if array.length > 0 && array[0].CeDiplomaID === \\\"\\\"}",
+    		source: "(55:4) {#if array.length > 0 && array[0].CeDiplomaID === \\\"\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:62) 
+    // (67:62) 
     function create_if_block_1(ctx) {
     	let each_1_anchor;
     	let each_value = /*array*/ ctx[1];
@@ -508,14 +508,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(66:62) ",
+    		source: "(67:62) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:4) {#if idkey === " " || idkey === ""}
+    // (63:4) {#if idkey === " " || idkey === ""}
     function create_if_block(ctx) {
     	let p;
 
@@ -523,8 +523,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Make sure to enter a valid ID for example 222G-MI3O-ZZZZ";
-    			attr_dev(p, "class", "svelte-1kumjsq");
-    			add_location(p, file, 62, 6, 1761);
+    			attr_dev(p, "class", "svelte-3vj0ex");
+    			add_location(p, file, 63, 6, 1810);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -539,16 +539,15 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(62:4) {#if idkey === \\\" \\\" || idkey === \\\"\\\"}",
+    		source: "(63:4) {#if idkey === \\\" \\\" || idkey === \\\"\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:6) {#each array as index}
+    // (68:6) {#each array as index}
     function create_each_block(ctx) {
-    	let div;
     	let tbody;
     	let tr0;
     	let td0;
@@ -581,11 +580,9 @@ var app = (function () {
     	let td9;
     	let t10_value = /*index*/ ctx[6].Degree1 + "";
     	let t10;
-    	let t11;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
     			tbody = element("tbody");
     			tr0 = element("tr");
     			td0 = element("td");
@@ -619,50 +616,46 @@ var app = (function () {
     			b5.textContent = "Credential:";
     			td9 = element("td");
     			t10 = text(t10_value);
-    			t11 = space();
-    			add_location(b0, file, 74, 19, 2292);
-    			add_location(b1, file, 74, 50, 2323);
-    			attr_dev(td0, "class", "svelte-1kumjsq");
-    			add_location(td0, file, 74, 15, 2288);
-    			attr_dev(td1, "class", "svelte-1kumjsq");
-    			add_location(td1, file, 74, 61, 2334);
-    			attr_dev(tr0, "class", "svelte-1kumjsq");
-    			add_location(tr0, file, 73, 12, 2269);
-    			add_location(b2, file, 77, 21, 2411);
-    			attr_dev(td2, "class", "svelte-1kumjsq");
-    			add_location(td2, file, 77, 17, 2407);
-    			attr_dev(td3, "class", "svelte-1kumjsq");
-    			add_location(td3, file, 77, 39, 2429);
-    			attr_dev(tr1, "class", "svelte-1kumjsq");
-    			add_location(tr1, file, 77, 13, 2403);
-    			add_location(b3, file, 78, 19, 2485);
-    			attr_dev(td4, "class", "svelte-1kumjsq");
-    			add_location(td4, file, 78, 15, 2481);
-    			attr_dev(td5, "class", "svelte-1kumjsq");
-    			add_location(td5, file, 78, 36, 2502);
-    			attr_dev(tr2, "class", "svelte-1kumjsq");
-    			add_location(tr2, file, 77, 72, 2462);
-    			add_location(b4, file, 80, 19, 2564);
-    			attr_dev(td6, "class", "svelte-1kumjsq");
-    			add_location(td6, file, 80, 15, 2560);
-    			attr_dev(td7, "class", "svelte-1kumjsq");
-    			add_location(td7, file, 80, 47, 2592);
-    			attr_dev(tr3, "class", "svelte-1kumjsq");
-    			add_location(tr3, file, 79, 13, 2541);
-    			add_location(b5, file, 82, 21, 2663);
-    			attr_dev(td8, "class", "svelte-1kumjsq");
-    			add_location(td8, file, 82, 17, 2659);
-    			attr_dev(td9, "class", "svelte-1kumjsq");
-    			add_location(td9, file, 82, 44, 2686);
-    			attr_dev(tr4, "class", "svelte-1kumjsq");
-    			add_location(tr4, file, 82, 13, 2655);
-    			add_location(tbody, file, 71, 10, 2207);
-    			attr_dev(div, "class", "credential_validation_result_message svelte-1kumjsq");
-    			add_location(div, file, 70, 8, 2146);
+    			add_location(b0, file, 75, 19, 2283);
+    			add_location(b1, file, 75, 50, 2314);
+    			attr_dev(td0, "class", "svelte-3vj0ex");
+    			add_location(td0, file, 75, 15, 2279);
+    			attr_dev(td1, "class", "svelte-3vj0ex");
+    			add_location(td1, file, 75, 61, 2325);
+    			attr_dev(tr0, "class", "svelte-3vj0ex");
+    			add_location(tr0, file, 74, 12, 2260);
+    			add_location(b2, file, 78, 21, 2402);
+    			attr_dev(td2, "class", "svelte-3vj0ex");
+    			add_location(td2, file, 78, 17, 2398);
+    			attr_dev(td3, "class", "svelte-3vj0ex");
+    			add_location(td3, file, 78, 39, 2420);
+    			attr_dev(tr1, "class", "svelte-3vj0ex");
+    			add_location(tr1, file, 78, 13, 2394);
+    			add_location(b3, file, 79, 19, 2476);
+    			attr_dev(td4, "class", "svelte-3vj0ex");
+    			add_location(td4, file, 79, 15, 2472);
+    			attr_dev(td5, "class", "svelte-3vj0ex");
+    			add_location(td5, file, 79, 36, 2493);
+    			attr_dev(tr2, "class", "svelte-3vj0ex");
+    			add_location(tr2, file, 78, 72, 2453);
+    			add_location(b4, file, 81, 19, 2555);
+    			attr_dev(td6, "class", "svelte-3vj0ex");
+    			add_location(td6, file, 81, 15, 2551);
+    			attr_dev(td7, "class", "svelte-3vj0ex");
+    			add_location(td7, file, 81, 47, 2583);
+    			attr_dev(tr3, "class", "svelte-3vj0ex");
+    			add_location(tr3, file, 80, 13, 2532);
+    			add_location(b5, file, 83, 21, 2654);
+    			attr_dev(td8, "class", "svelte-3vj0ex");
+    			add_location(td8, file, 83, 17, 2650);
+    			attr_dev(td9, "class", "svelte-3vj0ex");
+    			add_location(td9, file, 83, 44, 2677);
+    			attr_dev(tr4, "class", "svelte-3vj0ex");
+    			add_location(tr4, file, 83, 13, 2646);
+    			add_location(tbody, file, 72, 10, 2198);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, tbody);
+    			insert_dev(target, tbody, anchor);
     			append_dev(tbody, tr0);
     			append_dev(tr0, td0);
     			append_dev(td0, b0);
@@ -690,7 +683,6 @@ var app = (function () {
     			append_dev(td8, b5);
     			append_dev(tr4, td9);
     			append_dev(td9, t10);
-    			append_dev(div, t11);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*array*/ 2 && t4_value !== (t4_value = /*index*/ ctx[6].CeDiplomaID + "")) set_data_dev(t4, t4_value);
@@ -699,7 +691,7 @@ var app = (function () {
     			if (dirty & /*array*/ 2 && t10_value !== (t10_value = /*index*/ ctx[6].Degree1 + "")) set_data_dev(t10, t10_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(tbody);
     		}
     	};
 
@@ -707,7 +699,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(67:6) {#each array as index}",
+    		source: "(68:6) {#each array as index}",
     		ctx
     	});
 
@@ -719,7 +711,7 @@ var app = (function () {
     	let div0;
     	let h2;
     	let t1;
-    	let div2;
+    	let div3;
     	let div1;
     	let label;
     	let t3;
@@ -727,6 +719,7 @@ var app = (function () {
     	let t4;
     	let button;
     	let t6;
+    	let div2;
     	let t7;
     	let t8;
     	let p;
@@ -751,7 +744,7 @@ var app = (function () {
     			h2 = element("h2");
     			h2.textContent = "Credential Validation";
     			t1 = space();
-    			div2 = element("div");
+    			div3 = element("div");
     			div1 = element("div");
     			label = element("label");
     			label.textContent = "CeDiD*";
@@ -761,6 +754,7 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Validate";
     			t6 = space();
+    			div2 = element("div");
     			if (if_block0) if_block0.c();
     			t7 = space();
     			if (if_block1) if_block1.c();
@@ -771,26 +765,28 @@ var app = (function () {
     			a.textContent = "CeCredentialTrust";
     			attr_dev(h2, "class", "credentialvalidationtitle");
     			add_location(h2, file, 38, 4, 867);
-    			attr_dev(div0, "class", "credentialvalidation_form_title svelte-1kumjsq");
+    			attr_dev(div0, "class", "credentialvalidation_form_title svelte-3vj0ex");
     			add_location(div0, file, 37, 2, 817);
     			attr_dev(label, "for", "ceDiD");
-    			attr_dev(label, "class", "ceDiDlabel svelte-1kumjsq");
-    			add_location(label, file, 44, 6, 1096);
+    			attr_dev(label, "class", "ceDiDlabel svelte-3vj0ex");
+    			add_location(label, file, 44, 6, 1082);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "id", "utccredential");
-    			add_location(input, file, 45, 6, 1155);
-    			attr_dev(button, "class", "button btn--lightblue button--sm button cevalidatebutton svelte-1kumjsq");
+    			add_location(input, file, 45, 6, 1141);
+    			attr_dev(button, "class", "button btn--lightblue button--sm button cevalidatebutton svelte-3vj0ex");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file, 46, 6, 1221);
-    			attr_dev(div1, "class", "cegrid gap-x-4 max-w-xs svelte-1kumjsq");
-    			add_location(div1, file, 43, 4, 1052);
-    			attr_dev(div2, "class", "credentialvalidation_form cegrid cegrid-cols-2 credential_validation_result_message svelte-1kumjsq");
-    			add_location(div2, file, 40, 2, 943);
+    			add_location(button, file, 46, 6, 1207);
+    			attr_dev(div1, "class", "cegrid gap-x-4 max-w-xs svelte-3vj0ex");
+    			add_location(div1, file, 43, 4, 1038);
+    			attr_dev(div2, "class", "credential_validation_result_message cepr-32 svelte-3vj0ex");
+    			add_location(div2, file, 53, 4, 1366);
+    			attr_dev(div3, "class", "credentialvalidation_form ceflex credential_validation_result_message svelte-3vj0ex");
+    			add_location(div3, file, 40, 2, 943);
     			attr_dev(a, "href", "https://secure.cecredentialtrust.com/");
-    			add_location(a, file, 90, 15, 2846);
-    			attr_dev(p, "class", "credentialvalidation_form_footer svelte-1kumjsq");
-    			add_location(p, file, 89, 2, 2786);
-    			attr_dev(form, "class", "credentialvalidationform col-end-2 svelte-1kumjsq");
+    			add_location(a, file, 92, 15, 2840);
+    			attr_dev(p, "class", "credentialvalidation_form_footer svelte-3vj0ex");
+    			add_location(p, file, 91, 2, 2780);
+    			attr_dev(form, "class", "credentialvalidationform col-end-2 svelte-3vj0ex");
     			add_location(form, file, 33, 0, 713);
     		},
     		l: function claim(nodes) {
@@ -801,15 +797,16 @@ var app = (function () {
     			append_dev(form, div0);
     			append_dev(div0, h2);
     			append_dev(form, t1);
-    			append_dev(form, div2);
-    			append_dev(div2, div1);
+    			append_dev(form, div3);
+    			append_dev(div3, div1);
     			append_dev(div1, label);
     			append_dev(div1, t3);
     			append_dev(div1, input);
     			set_input_value(input, /*idkey*/ ctx[0]);
     			append_dev(div1, t4);
     			append_dev(div1, button);
-    			append_dev(div2, t6);
+    			append_dev(div3, t6);
+    			append_dev(div3, div2);
     			if (if_block0) if_block0.m(div2, null);
     			append_dev(div2, t7);
     			if (if_block1) if_block1.m(div2, null);

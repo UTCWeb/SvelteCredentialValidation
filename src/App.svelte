@@ -22,12 +22,12 @@
     }
     console.log(idkey);
     fetch(
-      "https://secure.cecredentialtrust.com:8086/api/webapi/v3/CeCredentialValidate/95848d1d-07d0-4667-91f5-96887d32c64c/" +
+      "https://web.api.endpoints.utc.edu/api/credential/" +
         idkey
     )
       .then((response) => response.json())
       .then((data) => (credentialarray = data));
-      credentialarray = credentialarray;
+    credentialarray = credentialarray;
   }
 </script>
 
@@ -53,7 +53,6 @@
     </div>
     <div class="credential_validation_result_message cepl-32">
       {#if credentialarray.length > 0 && credentialarray[0].CeDiplomaID === ""}
-        <!-- <p> Invalid ID, 222G-MI3O-ZZZZ. Don't forget the dash.</p> -->
         <p>
           We cannot validate the Credential at this time. Please contact
           apostille@utc.edu for assistance. When you do, please provide the
@@ -62,10 +61,8 @@
       {/if}
       {#if idkey === " " || idkey === ""}
         <p>Make sure to enter a valid ID for example 222G-MI3O-ZZZZ</p>
-      
       {:else if credentialarray.length > 0 && credentialarray[0].CeDiplomaID !== ""}
         {#each credentialarray as index}
-
           <tbody>
             <tr
               ><td><b />This is a valid credential<b /> </td><td>

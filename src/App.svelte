@@ -20,14 +20,12 @@
     if (idkey == " " || idkey == "") {
       return;
     }
-    console.log(idkey);
     fetch(
       "https://web.api.endpoints.utc.edu/api/credential/" +
         idkey
     )
       .then((response) => response.json())
       .then((data) => (credentialarray = data));
-    credentialarray = credentialarray;
   }
 </script>
 
@@ -42,10 +40,10 @@
     class="credentialvalidation_form ceflex credential_validation_result_message"
   >
     <div class="ceflexform max-w-xs">
-      <label for="ceDiD" class="ceDiDlabel">CeDiD*</label>
+      <label for="ceDiD" class="ceDiDlabel cedidrequired">CeDiD</label>
       <input type="text" id="utccredential" bind:value={idkey} />
       <button
-        class="button btn--lightblue button--sm button cevalidatebutton"
+        class="cebutton cebtn--lightblue button--sm cevalidatebutton"
         type="submit"
       >
         Validate
@@ -53,28 +51,26 @@
     </div>
     <div class="credential_validation_result_message cepl-32">
       {#if credentialarray.length > 0 && credentialarray[0].CeDiplomaID === ""}
-        <p>
+        <p class="cep-2">
           We cannot validate the Credential at this time. Please contact
           apostille@utc.edu for assistance. When you do, please provide the
           student name and CeDiD
         </p>
       {/if}
       {#if idkey === " " || idkey === ""}
-        <p>Make sure to enter a valid ID for example 222G-MI3O-ZZZZ</p>
+        <p class="cep-2" >Make sure to enter a valid ID for example 222G-MI3O-ZZZZ</p>
       {:else if credentialarray.length > 0 && credentialarray[0].CeDiplomaID !== ""}
         {#each credentialarray as index}
           <tbody>
-            <tr
-              ><td><b />This is a valid credential<b /> </td><td>
-                {dateTime}</td
-              ></tr
-            ><tr><td><b>CeDiD:</b></td><td>{index.CeDiplomaID}</td></tr><tr
-              ><td><b>Name:</b></td><td>{index.Name}</td></tr
-            ><tr
-              ><td><b>Conferral Date: </b></td><td>{index.ConferralDate}</td
-              ></tr
-            ><tr><td><b>Credential:</b></td><td>{index.Degree1}</td></tr></tbody
-          >
+            <tr><td><b />This is a valid credential<b /> </td><td>{dateTime}</td></tr>
+            <tr><td><b>CeDiD:</b></td><td>{index.CeDiplomaID}</td></tr>
+            <tr><td><b>Name:</b></td><td>{index.Name}</td></tr>
+            <tr><td><b>Conferral Date: </b></td><td>{index.ConferralDate}</td></tr>
+            <tr><td><b>Credential:</b></td><td>{index.Degree1}</td></tr>
+            {#if (index.Major1 !== "")}
+             <tr><td><b>Major:</b></td><td>{index.Major1}</td></tr>
+            {/if}
+          </tbody>
         {/each}
       {/if}
     </div>
@@ -89,13 +85,12 @@
 
 <!-- {submit} -->
 <style>
+  .cedidrequired::after {
+    content: "*";
+    color: red;
+    padding: 0.2rem;
+  }
   @media (min-width: 200px) {
-    .cegrid {
-      display: grid;
-    }
-    .gap-x-4 {
-      column-gap: 1rem;
-    }
     .max-w-xs {
       max-width: 20rem;
     }
@@ -104,6 +99,10 @@
     display: flex;
     flex-direction: column;
   }
+  .cep-2
+  {
+    padding: 0.5rem
+  }
   .ceDiDlabel {
     font-weight: bold;
     font-size: 0.85rem;
@@ -111,7 +110,7 @@
   .cevalidatebutton {
     margin-top: 2rem;
   }
-  .button {
+  .cebutton {
     /* display: inline-block; */
     background-color: transparent;
     padding: 10px 1.5rem;
@@ -126,7 +125,7 @@
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
-  .btn--lightblue {
+  .cebtn--lightblue {
     --tw-bg-opacity: 1;
     background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
     --tw-text-opacity: 1;
@@ -136,7 +135,7 @@
   .credential_validation_result_message {
     border-collapse: collapse;
     width: 100%;
-    margin: 1rem 0 1rem 0;
+    margin: 0rem 0 1rem 0;
   }
 
   .credential_validation_result_message td {
@@ -183,9 +182,6 @@
     }
     .cepl-32 {
       padding-left: 8rem;
-    }
-    .cegrid-cols-2 {
-      /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
     }
     .credential_validation_result_message p {
       max-width: 25rem;
